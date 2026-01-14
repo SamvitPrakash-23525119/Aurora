@@ -1,2 +1,2 @@
-# Weather-Buddy
+# Aurora <3
 Mobile weather application
