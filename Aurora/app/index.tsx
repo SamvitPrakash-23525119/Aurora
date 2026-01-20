@@ -1,49 +1,73 @@
-import { Text, View, TouchableOpacity, PanResponder } from "react-native";
-import { router } from 'expo-router'
-import { useRef } from 'react'
-import styles  from '@/styles/pages/index'
+import { useState } from 'react';
+import { View, Text } from 'react-native'
+import cssAdapter from '@/styles/pages/DynamicBackground';
+import { Sun } from '@/components/illustrations/Sun';
+import { Lightning } from '@/components/illustrations/Lightning';
+import { Cloud } from '@/components/illustrations/Cloud';
+import { RainDroplets } from '@/components/illustrations/RainDroplets';
+import { Snowflakes } from '@/components/illustrations/Snowflakes';
+import { Wind } from '@/components/illustrations/Wind';
+
+interface DynamicBackgroundProps {
+  weatherVariable: string | null;
+  gestureHandling?: any;
+}
 
 export default function Index() {
-	const title = "AURORA";
-
-	const panResponder = useRef(
-		PanResponder.create({
-			onMoveShouldSetPanResponder: (_, gesture) => {
-				return Math.abs(gesture.dy) > 20;
-			},
-
-			onPanResponderRelease: (_, gesture) => {
-				if (gesture.dy < -100) {
-					router.push("/weather");
-				}
-			},
-		})
-	).current;
+	const [weatherVariable, setWeatherVariable] = useState("Windy");
+	const styles = cssAdapter(weatherVariable);
 
 	return (
-		<View {...panResponder.panHandlers} style={styles.PAGE_CONTAINER} >
-			<View style={styles.TITLE_CONTAINER}>
-				<View style={styles.TITLE_TEXT_CONTAINER}>
-					{title.split('').map((letter, index) => (
-						<Text key={index} style={styles.TITLE_TEXT}>
-							{letter}
-						</Text>
-					))}
-				</View>
-				<View style={styles.TITLE_ICON}>
-
-				</View>
-			</View>
-			<View style={styles.WELCOME_CONTAINER}>
-				<Text style={styles.WELCOME_TEXT}>
-					Welcome to {title}
+		<View style={styles.PAGE_CONTAINER}>
+			<View style={styles.MAIN_TEXT_CONTAINER}>
+				<Text style={styles.TEXT_SMALL}>
+					Tuesday, 20 Jan
 				</Text>
-				{/* <Text style={styles.WELCOME_HINT}>
-					Swipe up to continue
-				</Text> */}
-				<TouchableOpacity onPress={() => router.push("/weather")}>
-					<Text style={styles.WELCOME_ACTION}>Go to Weather</Text>
-				</TouchableOpacity>
+				<Text style={styles.TEXT_BIG}>
+					Edenvale
+				</Text>
+				<Text style={styles.TEXT_SMALL}>
+					South Africa
+				</Text>
+			</View>
+
+			<View style={weatherVariable === "Lightning" ? styles.LIGHTNING_HEADING_CONTAINER :
+				weatherVariable === "Rainy" ? styles.RAINY_HEADING_CONTAINER : styles.HEADING_CONTAINER}>
+				<Text style={styles.TEXT_HEADING}>
+					{weatherVariable}
+				</Text>
+			</View>
+
+			{weatherVariable === "Sunny" ? (
+				<View style={styles.SUN_ILLUSTRATION}>
+					<Sun size={300}/>
+				</View>
+			) : weatherVariable === "Lightning" ? (
+				<View style={styles.LIGHTNING_ILLUSTRATION}>
+					<Lightning size={350}/>
+				</View>
+			) : weatherVariable == 'Cloudy' ? (
+				<View style={styles.CLOUD_ILLUSTRATION}>
+					<Cloud size={350}/>
+				</View>
+			) : weatherVariable == 'Rainy' ? (
+				<View style={styles.RAIN_ILLUSTRATION}>
+					<RainDroplets size={350}/>
+				</View>
+			) : weatherVariable == 'Snowy' ? (
+				<View style={styles.SNOW_ILLUSTRATION}>
+					<Snowflakes size={350}/>
+				</View>
+			) : weatherVariable == 'Windy' ? (
+				<View style={styles.WIND_ILLUSTRATION}>
+					<Wind size={350}/>
+				</View>
+			) : null}
+
+			<View style={styles.TEMPERATURE_CONTAINER}>
+				<Text style={styles.TEMPERATURE_TEXT}>
+					27°C
+				</Text>
 			</View>
 		</View>
 	);
