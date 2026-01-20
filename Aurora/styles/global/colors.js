@@ -35,6 +35,7 @@ const wind = {
 };
 
 function colors(key){
+    
     switch (key) {
         case 'Rainy':
             return rain;

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import colors from '@/styles/global/colors'
-import { Lightning } from '@/components/illustrations/Lightning';
+import { fontFamilies } from '@/styles/global/fonts';
 
 
 export default function cssAdapter(key) {
@@ -38,7 +38,7 @@ export default function cssAdapter(key) {
 
         MAIN_TEXT_CONTAINER: {
             position: 'absolute',
-            top: '15%',
+            top: '10%',
             right: '75%',
         },
 
@@ -52,22 +52,25 @@ export default function cssAdapter(key) {
         TEMPERATURE_TEXT: {
             fontSize: 60,
             color: colorScheme.ACCENT,
+            fontFamily: fontFamilies.light,
         },
 
         TEXT_BIG: {
             fontSize: 25,
-            fontWeight: 'bold',
             color: colorScheme.ACCENT,
+            fontFamily: fontFamilies.regular,
         },
 
         TEXT_SMALL: {
             fontSize: 15,
             color: colorScheme.ACCENT,
+            fontFamily: fontFamilies.light,
         },
 
         TEXT_HEADING: {
             fontSize: 60,
             color: colorScheme.ACCENT,
+            fontFamily: fontFamilies.medium,
         },
 
         SUN_ILLUSTRATION: {

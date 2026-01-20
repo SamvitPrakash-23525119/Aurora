@@ -1,8 +1,6 @@
-import { View, Text, PanResponder } from 'react-native'
+import { PanResponder } from 'react-native'
 import { useRef } from 'react'
 import { router } from 'expo-router';
-import styles from '@/styles/pages/weather';
-import { RainDroplets } from '@/components/illustrations/RainDroplets'
 import DynamicBackground from '@/components/dynamic_background/DynamicBackground'
 
 export default function Weather() {
@@ -22,6 +20,6 @@ export default function Weather() {
 
 	return (
 
-		<DynamicBackground weatherVariable={"Rainy"} gestureHandling={onPanResponder.panHandlers} />
+		<DynamicBackground weatherVariable={"Cloudy"} gestureHandling={onPanResponder.panHandlers} />
 	);
 }
