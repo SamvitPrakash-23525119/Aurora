@@ -1,7 +1,7 @@
 import { Text, View, TouchableOpacity, PanResponder } from "react-native";
 import { router } from 'expo-router'
 import { useRef } from 'react'
-import styles  from '@/styles/index'
+import styles  from '@/styles/pages/index'
 
 export default function Index() {
 	const title = "AURORA";
