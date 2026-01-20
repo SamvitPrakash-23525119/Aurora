@@ -1,8 +1,12 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
+    PAGE_CONTAINER: {
+        flex: 1
+    },
+
 	TITLE_CONTAINER: {
-        flex: 1,
+        flex: 2,
         backgroundColor: '#E9E5C7',
         justifyContent: 'flex-start',
         alignItems: 'center'
@@ -46,6 +50,18 @@ const styles = StyleSheet.create({
         lineHeight: 18, 
         textAlign: 'center', 
         paddingHorizontal: 20 
+    },
+
+    WELCOME_ACTION: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        lineHeight: 20,
+        textAlign: 'center',
+        padding: 12,
+        borderRadius: 8,
+        backgroundColor: '#EB534E',
+        color: 'white',
+        marginTop: 12
     }
 
 });
