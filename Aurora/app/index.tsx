@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { View, Text, PanResponder } from 'react-native'
-import { useRef } from 'react'
 import { router } from 'expo-router';
 
 import { Sun } from '@/components/illustrations/Sun';
@@ -10,6 +9,7 @@ import { RainDroplets } from '@/components/illustrations/RainDroplets';
 import { Snowflakes } from '@/components/illustrations/Snowflakes';
 import { Wind } from '@/components/illustrations/Wind';
 import cssAdapter from '@/styles/pages/index';
+import SideButton from '@/components/side_button/SideButton';
 
 
 export default function Index() {
@@ -24,7 +24,10 @@ export default function Index() {
 
 			onPanResponderRelease: (_, gesture) => {
 				if (gesture.dy < -50) {
-					router.push("/weather");
+					router.push({ 
+						pathname: "/forcast", 
+						params: { forcast: 'slide_from_bottom' } 
+					});
 				}
 			},
 		})
@@ -50,6 +53,9 @@ export default function Index() {
 					{weatherVariable}
 				</Text>
 			</View>
+
+			<SideButton weatherVariable={weatherVariable} page={"weather"} />
+			<SideButton weatherVariable={weatherVariable} page={"forcast"} invert />
 
 			{weatherVariable === "Sunny" ? (
 				<View style={styles.SUN_ILLUSTRATION}>

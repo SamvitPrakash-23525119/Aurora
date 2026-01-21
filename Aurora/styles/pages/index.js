@@ -23,7 +23,7 @@ export default function cssAdapter(key) {
         },
 
         LIGHTNING_HEADING_CONTAINER: {
-            right: -80,
+            right: -90,
             top: '25%',
             position: 'absolute',
             transform: [{ rotate: '90deg' }],
