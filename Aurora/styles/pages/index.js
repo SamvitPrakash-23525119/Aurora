@@ -44,7 +44,7 @@ export default function cssAdapter(key) {
 
         TEMPERATURE_CONTAINER: {
             position: 'absolute',
-            top: '88%',
+            top: '94%',
             right: '65%',
             color: colorScheme.ACCENT,
         },
@@ -73,46 +73,39 @@ export default function cssAdapter(key) {
             fontFamily: fontFamilies.medium,
         },
 
-        SWIPE_UP_CONTAINER: {
-            position: 'absolute',
-            top: '101%',
-            left: '38%',
-            width: '100%',
-        },
-
         SUN_ILLUSTRATION: {
             position: 'absolute',
-            top: 290,
+            top: 320,
             right: 30,
         },
 
         CLOUD_ILLUSTRATION: {
             position: 'absolute',
-            top: 290,
+            top: 320,
             right: 30,
         },
 
         RAIN_ILLUSTRATION: {
             position: 'absolute',
-            top: 290,
+            top: 300,
             right: 30,
         },
 
         SNOW_ILLUSTRATION: {
             position: 'absolute',
-            top: 290,
+            top: 300,
             right: 30,
         },
 
         WIND_ILLUSTRATION: {
             position: 'absolute',
-            top: 290,
+            top: 320,
             right: 30,
         },
 
         LIGHTNING_ILLUSTRATION: {
             position: 'absolute',
-            top: 100,
+            top: 130,
             right: 0,
         },
 

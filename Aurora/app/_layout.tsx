@@ -32,21 +32,21 @@ export default function RootLayout() {
             <Stack.Screen name="index" 
                 options={{
                     headerShown: false,
-                    animation: 'slide_from_left',
+                    animation: 'slide_from_right',
                 }}
             />
 
             <Stack.Screen name="weather" 
                 options={{
                     headerShown: false,
-                    animation: 'slide_from_right',
+                    animation: 'slide_from_left',
                 }}
             />
 
             <Stack.Screen name="forcast" 
                 options={{
                     headerShown: false,
-                    animation: 'slide_from_bottom',
+                    animation: 'slide_from_left',
                 }}
             />
         </Stack>

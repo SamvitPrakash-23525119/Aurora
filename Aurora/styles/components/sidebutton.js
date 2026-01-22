@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import colors from '../global/colors';
 
-export default function cssAdapter(key){
+export default function cssAdapter(key, top){
     const colorScheme = colors(key);
 
     return StyleSheet.create({
@@ -17,34 +17,13 @@ export default function cssAdapter(key){
         
         SIDE_BUTTON_CONTAINER: {
             position: 'absolute',
-            top: '60%',
-            right: '-2%',
-            zIndex: 1000,
-            backgroundColor: colorScheme.ACCENT,
-            borderTopLeftRadius: 22,
-            borderBottomLeftRadius: 22,
-
-        },
-
-        INVERTED_TOUCHABLE_OPACITY: {
-            width: 44,
-            height: 44,
-            borderRadius: 22,
-            justifyContent: "center",
-            alignItems: "center",
-            overflow: "hidden",
-            backgroundColor: colorScheme.ACCENT,
-        },
-        
-        INVERTED_SIDE_BUTTON_CONTAINER: {
-            position: 'absolute',
-            top: '60%',
+            top: top,
             left: '-2%',
             zIndex: 1000,
             backgroundColor: colorScheme.ACCENT,
             borderTopRightRadius: 22,
             borderBottomRightRadius: 22,
 
-        },
+        }
     });
 }

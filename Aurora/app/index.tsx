@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
-import { View, Text, PanResponder } from 'react-native'
-import { router } from 'expo-router';
+import React, { useState } from 'react';
+import { View, Text } from 'react-native'
 
 import { Sun } from '@/components/illustrations/Sun';
 import { Lightning } from '@/components/illustrations/Lightning';
@@ -13,28 +12,11 @@ import SideButton from '@/components/side_button/SideButton';
 
 
 export default function Index() {
-	const [weatherVariable, setWeatherVariable] = useState("Windy");
+	const [weatherVariable, setWeatherVariable] = useState("Lightning");
 	const styles = cssAdapter(weatherVariable);
 
-	const onPanResponder = useRef(
-		PanResponder.create({
-			onMoveShouldSetPanResponder: (_, gesture) => {
-				return Math.abs(gesture.dy) > 15;
-			},
-
-			onPanResponderRelease: (_, gesture) => {
-				if (gesture.dy < -50) {
-					router.push({ 
-						pathname: "/forcast", 
-						params: { forcast: 'slide_from_bottom' } 
-					});
-				}
-			},
-		})
-	).current;
-
 	return (
-		<View style={styles.PAGE_CONTAINER} {...onPanResponder.panHandlers}>
+		<View style={styles.PAGE_CONTAINER}>
 			<View style={styles.MAIN_TEXT_CONTAINER}>
 				<Text style={styles.TEXT_SMALL}>
 					Tuesday, 20 Jan
@@ -54,8 +36,9 @@ export default function Index() {
 				</Text>
 			</View>
 
-			<SideButton weatherVariable={weatherVariable} page={"weather"} />
-			<SideButton weatherVariable={weatherVariable} page={"forcast"} invert />
+			<SideButton weatherVariable={weatherVariable} page={"weather"} top={"26%"} icon={"menu"} />
+			<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"33%"} icon={"calendar-view-week"} />
+			<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"40%"} icon={"settings"} />
 
 			{weatherVariable === "Sunny" ? (
 				<View style={styles.SUN_ILLUSTRATION}>
@@ -87,10 +70,6 @@ export default function Index() {
 				<Text style={styles.TEMPERATURE_TEXT}>
 					27°C
 				</Text>
-			
-			</View>
-			<View style={styles.SWIPE_UP_CONTAINER}>
-				<Text style={styles.TEXT_SMALL}>swipe up for more</Text>
 			</View>
 		</View>
 	);
