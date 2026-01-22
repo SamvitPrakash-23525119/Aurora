@@ -1,10 +1,10 @@
 import Svg, { Path, G } from 'react-native-svg'
 
-export function Lightning() {
+export function Lightning({width=400, height=600}) {
 	return (
 		<Svg
-			width="400"
-			height="600"
+			width={width}
+			height={height}
 			viewBox="0 0 400 600"
 			className="drop-shadow-lg"
 		>
