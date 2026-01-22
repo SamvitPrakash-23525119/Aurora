@@ -12,18 +12,34 @@ export default function cssAdapter(key, top){
             justifyContent: "center",
             alignItems: "center",
             overflow: "hidden",
-            backgroundColor: colorScheme.ACCENT,
         },
-        
+
         SIDE_BUTTON_CONTAINER: {
             position: 'absolute',
             top: top,
+        },
+
+        SIDE_BUTTON_CONTAINER_LEFT:{
             left: '-2%',
             zIndex: 1000,
-            backgroundColor: colorScheme.ACCENT,
             borderTopRightRadius: 22,
             borderBottomRightRadius: 22,
+        },
 
-        }
+        SIDE_BUTTON_CONTAINER_RIGHT:{
+            right: '-2%',
+            zIndex: 1000,
+            borderTopLeftRadius: 22,
+            borderBottomLeftRadius: 22,
+        },
+
+        COLOR: {
+            backgroundColor: colorScheme.ACCENT,
+        },
+
+        COLOR_INVERT: {
+            backgroundColor: colorScheme.SECONDARY,
+        },
+
     });
 }

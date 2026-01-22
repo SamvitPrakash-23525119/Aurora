@@ -12,7 +12,7 @@ import SideButton from '@/components/side_button/SideButton';
 
 
 export default function Index() {
-	const [weatherVariable, setWeatherVariable] = useState("Lightning");
+	const [weatherVariable, setWeatherVariable] = useState("Windy");
 	const styles = cssAdapter(weatherVariable);
 
 	return (
