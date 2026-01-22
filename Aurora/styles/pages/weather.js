@@ -1,12 +1,17 @@
 import { StyleSheet } from 'react-native'
+import colors from '@/styles/global/colors'
 
-const styles = StyleSheet.create({
-    PAGE_CONTAINER: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#233947"
-    }
-});
 
-export default styles;
+export default function cssAdapter(key){
+    const colorScheme = colors(key);
+
+    const styles = StyleSheet.create({
+        PAGE_CONTAINER: {
+           height: '100%',
+           backgroundColor: colorScheme.ACCENT
+        },
+
+    });
+
+    return styles;
+};

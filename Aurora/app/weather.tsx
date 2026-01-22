@@ -1,25 +1,31 @@
-import { PanResponder } from 'react-native'
-import { useRef } from 'react'
-import { router } from 'expo-router';
-import DynamicBackground from '@/components/dynamic_background/DynamicBackground'
+import { View, TextInput, PanResponder } from 'react-native'
+import { useRef } from 'react';
+import { router, useLocalSearchParams } from 'expo-router';
+
+import  cssAdapter from '@/styles/pages/weather';
 
 export default function Weather() {
-	const onPanResponder = useRef(
-		PanResponder.create({
-			onMoveShouldSetPanResponder: (_, gesture) => {
-				return Math.abs(gesture.dy) > 20;
-			},
+    const { weather } = useLocalSearchParams();
+    const styles = cssAdapter(weather);
 
-			onPanResponderRelease: (_, gesture) => {
-				if (gesture.dy > 100) {
-					router.push("/");
-				}
-			},
-		})
-	).current;
+    const onPanResponder = useRef(
+        PanResponder.create({
+            onMoveShouldSetPanResponder: (_, gesture) => {
+                return Math.abs(gesture.dy) > 15;
+            },
 
-	return (
+            onPanResponderRelease: (_, gesture) => {
+                if (gesture.dy > 50) {
+                    router.push("/");
+                }
+            },
+        })
+    ).current;
 
-		<DynamicBackground weatherVariable={"Cloudy"} gestureHandling={onPanResponder.panHandlers} />
-	);
+    return (
+        <View style={styles.PAGE_CONTAINER} {...onPanResponder.panHandlers}>
+            
+
+        </View>
+    );
 }

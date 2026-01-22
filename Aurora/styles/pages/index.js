@@ -1,69 +1,115 @@
 import { StyleSheet } from 'react-native'
+import colors from '@/styles/global/colors'
+import { fontFamilies } from '@/styles/global/fonts';
 
-const styles = StyleSheet.create({
-    PAGE_CONTAINER: {
-        flex: 1
-    },
 
-	TITLE_CONTAINER: {
-        flex: 2,
-        backgroundColor: '#E9E5C7',
-        justifyContent: 'flex-start',
-        alignItems: 'center'
-    },
+export default function cssAdapter(key) {
+    const colorScheme = colors(key);
 
-    TITLE_TEXT_CONTAINER: {
-        alignItems: 'center',
-        paddingTop: 100
-    },
+    const styles = StyleSheet.create({
+        PAGE_CONTAINER: {
+            backgroundColor: colorScheme.SECONDARY,
+            height: '100%',
+            flex: 1,
+            paddingHorizontal: 20,
+            paddingTop: 50,
+        },
+        
+        HEADING_CONTAINER: {
+            right: -50,
+            top: '20%',
+            position: 'absolute',
+            transform: [{ rotate: '90deg' }],
+        },
 
-    TITLE_TEXT: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        lineHeight: 25,
-    },
+        LIGHTNING_HEADING_CONTAINER: {
+            right: -90,
+            top: '25%',
+            position: 'absolute',
+            transform: [{ rotate: '90deg' }],
+        },
 
-    TITLE_ICON: {
-        width: 200,
-        height: 200,
-        borderRadius: 100,
-        backgroundColor: '#EB534E',
-        marginTop: 100
-    },
+        RAINY_HEADING_CONTAINER: {
+            right: -40,
+            top: '20%',
+            position: 'absolute',
+            transform: [{ rotate: '90deg' }],
+        },
 
-    WELCOME_CONTAINER: { 
-        alignItems: 'center', 
-        paddingBottom: 100, 
-        backgroundColor: '#E9E5C7' 
-    },
+        MAIN_TEXT_CONTAINER: {
+            position: 'absolute',
+            top: '10%',
+            right: '75%',
+        },
 
-    WELCOME_TEXT: { 
-        fontSize: 18, 
-        fontWeight: 'bold', 
-        lineHeight: 22, 
-        width: '100%', 
-        textAlign: 'center'
-    },
+        TEMPERATURE_CONTAINER: {
+            position: 'absolute',
+            top: '94%',
+            right: '65%',
+            color: colorScheme.ACCENT,
+        },
 
-    WELCOME_HINT: { 
-        fontSize: 14, 
-        lineHeight: 18, 
-        textAlign: 'center', 
-        paddingHorizontal: 20 
-    },
+        TEMPERATURE_TEXT: {
+            fontSize: 60,
+            color: colorScheme.ACCENT,
+            fontFamily: fontFamilies.light,
+        },
 
-    WELCOME_ACTION: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        lineHeight: 20,
-        textAlign: 'center',
-        padding: 12,
-        borderRadius: 8,
-        backgroundColor: '#EB534E',
-        color: 'white',
-        marginTop: 12
-    }
+        TEXT_BIG: {
+            fontSize: 25,
+            color: colorScheme.ACCENT,
+            fontFamily: fontFamilies.regular,
+        },
 
-});
+        TEXT_SMALL: {
+            fontSize: 15,
+            color: colorScheme.ACCENT,
+            fontFamily: fontFamilies.light,
+        },
 
-export default styles;
+        TEXT_HEADING: {
+            fontSize: 60,
+            color: colorScheme.ACCENT,
+            fontFamily: fontFamilies.medium,
+        },
+
+        SUN_ILLUSTRATION: {
+            position: 'absolute',
+            top: 320,
+            right: 30,
+        },
+
+        CLOUD_ILLUSTRATION: {
+            position: 'absolute',
+            top: 320,
+            right: 30,
+        },
+
+        RAIN_ILLUSTRATION: {
+            position: 'absolute',
+            top: 300,
+            right: 30,
+        },
+
+        SNOW_ILLUSTRATION: {
+            position: 'absolute',
+            top: 300,
+            right: 30,
+        },
+
+        WIND_ILLUSTRATION: {
+            position: 'absolute',
+            top: 320,
+            right: 30,
+        },
+
+        LIGHTNING_ILLUSTRATION: {
+            position: 'absolute',
+            top: 130,
+            right: 0,
+        },
+
+    });
+
+    return styles;
+}
