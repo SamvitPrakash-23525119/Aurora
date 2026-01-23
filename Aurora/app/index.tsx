@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native'
+import { View, Text } from 'react-native';
 
 import { Sun } from '@/components/illustrations/Sun';
 import { Lightning } from '@/components/illustrations/Lightning';
@@ -12,7 +12,7 @@ import SideButton from '@/components/side_button/SideButton';
 
 
 export default function Index() {
-	const [weatherVariable, setWeatherVariable] = useState("Windy");
+	const [weatherVariable, setWeatherVariable] = useState("Rainy");
 	const styles = cssAdapter(weatherVariable);
 
 	return (
@@ -50,7 +50,7 @@ export default function Index() {
 				</View>
 			) : weatherVariable == 'Cloudy' ? (
 				<View style={styles.CLOUD_ILLUSTRATION}>
-					<Cloud size={350}/>
+					<Cloud size={400}/>
 				</View>
 			) : weatherVariable == 'Rainy' ? (
 				<View style={styles.RAIN_ILLUSTRATION}>
