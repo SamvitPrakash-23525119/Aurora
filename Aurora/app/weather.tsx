@@ -26,29 +26,23 @@ export default function Weather() {
             case 'today':
                 return <Forecast weatherStr={weatherStr} />;
             case 'information':
-                return <Metrics />;
+                return <Metrics weatherVariable={weatherStr}/>;
             default:
                 return null;
         }
     };
 
-    const onPanResponder = useRef(
-        PanResponder.create({
-            onMoveShouldSetPanResponder: (_, gesture) => {
-                return Math.abs(gesture.dy) > 15;
-            },
-
-            onPanResponderRelease: (_, gesture) => {
-                if (gesture.dy > 50) {
-                    router.push("/");
-                }
-            },
-        })
-    ).current;
-
     return (
-        <View style={styles.PAGE_CONTAINER} {...onPanResponder.panHandlers}>
-            <SideButton weatherVariable={weatherStr} page={""} icon={"arrow-right"} top={"6%"} invert={true} right={true}/>
+        <View style={styles.PAGE_CONTAINER}>
+            <SideButton 
+                weatherVariable={weatherStr} 
+                page={""} 
+                icon={"arrow-right"} 
+                top={"6%"} 
+                invert={true} 
+                right={true}
+            />
+
             <TabView
                 navigationState={{ index, routes }}
                 renderScene={renderScene}
@@ -56,12 +50,14 @@ export default function Weather() {
                 initialLayout={{ width: layout.width }}
                 renderTabBar={() => null}
             />
+
             <DotIndicator
                 count={routes.length}
                 activeIndex={index}
                 onPress={setIndex}
                 weatherVariable={weatherStr}
             />
+            
         </View>
     );
 }

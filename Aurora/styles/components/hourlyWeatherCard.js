@@ -15,7 +15,7 @@ export default function cssAdapter(key){
             minWidth: 375,
             borderWidth: 1,
             padding: 16,
-            margin: 8,
+            margin: 3,
 
         },
 

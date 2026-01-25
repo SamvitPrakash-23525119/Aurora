@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native'
-import colors from'@/styles/global/colors'
+import { StyleSheet } from 'react-native';
+import colors from '@/styles/global/colors';
 import { fontFamilies } from '@/styles/global/fonts';
 
 export default function cssAdapter(key){
@@ -21,7 +21,6 @@ export default function cssAdapter(key){
             marginBottom: 12,
             fontSize: 24,
         }
-
     });
 
     return styles;
