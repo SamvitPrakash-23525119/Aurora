@@ -6,12 +6,12 @@ export default function cssAdapter(key, top){
 
     return StyleSheet.create({
         TOUCHABLE_OPACITY: {
-            width: 44,
-            height: 44,
-            borderRadius: 22,
             justifyContent: "center",
             alignItems: "center",
             overflow: "hidden",
+            borderRadius: 22,
+            height: 44,
+            width: 44,
         },
 
         SIDE_BUTTON_CONTAINER: {
@@ -20,17 +20,17 @@ export default function cssAdapter(key, top){
         },
 
         SIDE_BUTTON_CONTAINER_LEFT:{
-            left: '-2%',
-            zIndex: 1000,
-            borderTopRightRadius: 22,
             borderBottomRightRadius: 22,
+            borderTopRightRadius: 22,
+            zIndex: 1000,
+            left: '-2%',
         },
 
         SIDE_BUTTON_CONTAINER_RIGHT:{
+            borderBottomLeftRadius: 22,
+            borderTopLeftRadius: 22,
             right: '-2%',
             zIndex: 1000,
-            borderTopLeftRadius: 22,
-            borderBottomLeftRadius: 22,
         },
 
         COLOR: {

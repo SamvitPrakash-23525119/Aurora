@@ -81,8 +81,8 @@ export default function cssAdapter(key) {
 
         CLOUD_ILLUSTRATION: {
             position: 'absolute',
-            top: 320,
-            right: 30,
+            top: 290,
+            right: 25,
         },
 
         RAIN_ILLUSTRATION: {
