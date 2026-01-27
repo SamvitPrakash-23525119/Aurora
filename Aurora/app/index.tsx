@@ -12,7 +12,7 @@ import SideButton from '@/components/side_button/SideButton';
 
 
 export default function Index() {
-	const [weatherVariable, setWeatherVariable] = useState("Rainy");
+	const [weatherVariable, setWeatherVariable] = useState("Windy");
 	const styles = cssAdapter(weatherVariable);
 
 	return (
@@ -36,8 +36,8 @@ export default function Index() {
 				</Text>
 			</View>
 
-			<SideButton weatherVariable={weatherVariable} page={"weather"} top={"26%"} icon={"menu"} />
-			<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"33%"} icon={"calendar-view-week"} />
+			<SideButton weatherVariable={weatherVariable} page={"weather"} top={"26%"} icon={"insights"} />
+			<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"33%"} icon={"landscape"} />
 			<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"40%"} icon={"settings"} />
 
 			{weatherVariable === "Sunny" ? (

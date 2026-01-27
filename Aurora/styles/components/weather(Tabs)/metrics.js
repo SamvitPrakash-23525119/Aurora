@@ -12,12 +12,12 @@ export default function cssAdapter(key){
         },
 
         PAGE_CONTAINER: {
-            marginTop: '15%',
         },
-
+        
         TEXT_HEADING: {
             fontFamily: fontFamilies.regular,
             color: colorScheme.SECONDARY,
+            marginTop: '15%',
             marginBottom: 12,
             fontSize: 24,
         }
