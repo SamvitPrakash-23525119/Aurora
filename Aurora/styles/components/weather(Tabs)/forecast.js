@@ -12,7 +12,6 @@ export default function cssAdapter(key){
         },
 
         PAGE_CONTAINER: {
-            // marginTop: '15%',
         },
 
         TEXT_HEADING: {

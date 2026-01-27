@@ -11,7 +11,9 @@ export default function cssAdapter(key){
             alignItems: 'center',
         },
 
-        PAGE_CONTAINER: {
+        ROW_CONTAINER: {
+            flexDirection: 'row',
+            height: '100%'
         },
         
         TEXT_HEADING: {
