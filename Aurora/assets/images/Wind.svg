@@ -1,0 +1,25 @@
+<svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="rotate(140 50 50)">
+    <path
+      d="M10 30 L60 30 Q70 30 70 20 Q70 10 60 10 Q55 10 53 13"
+      stroke="#ECDCC6"
+      stroke-width="3"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <path
+      d="M10 50 L75 50 Q85 50 85 40 Q85 30 75 30 Q70 30 68 33"
+      stroke="#ECDCC6"
+      stroke-width="3"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <path
+      d="M10 70 L55 70 Q65 70 65 80 Q65 90 55 90 Q50 90 48 87"
+      stroke="#ECDCC6"
+      stroke-width="3"
+      stroke-linecap="round"
+      fill="none"
+    />
+  </g>
+</svg>
