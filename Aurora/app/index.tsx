@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
+import { Text, View } from 'react-native';
 
-import { Sun } from '@/components/illustrations/Sun';
-import { Lightning } from '@/components/illustrations/Lightning';
 import { Cloud } from '@/components/illustrations/Cloud';
+import { Lightning } from '@/components/illustrations/Lightning';
 import { RainDroplets } from '@/components/illustrations/RainDroplets';
 import { Snowflakes } from '@/components/illustrations/Snowflakes';
+import { Sun } from '@/components/illustrations/Sun';
 import { Wind } from '@/components/illustrations/Wind';
-import cssAdapter from '@/styles/pages/index';
 import SideButton from '@/components/side_button/SideButton';
+import cssAdapter from '@/styles/pages/index';
 
 
 export default function Index() {
-	const [weatherVariable, setWeatherVariable] = useState("Rainy");
+	const [weatherVariable, setWeatherVariable] = useState("Lightning");
 	const styles = cssAdapter(weatherVariable);
 
 	return (

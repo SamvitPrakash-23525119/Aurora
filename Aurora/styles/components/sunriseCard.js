@@ -6,9 +6,9 @@ export default function cssAdapter(key){
     const colorScheme = colors(key);
     const styles = StyleSheet.create({
         CARD_CONTAINER: {
-            backgroundColor: colorScheme.ACCENT,
-            borderWidth: 2,
-            borderColor: colorScheme.SECONDARY,
+            backgroundColor: colorScheme.SECONDARY,
+            // borderWidth: 2,
+            // borderColor: colorScheme.SECONDARY,
             alignItems: 'center',
             borderRadius: 12,
             height: 75,
@@ -32,14 +32,14 @@ export default function cssAdapter(key){
 
         HEADING_TEXT: {
             fontFamily: fontFamilies.light,
-            color: colorScheme.SECONDARY,
+            color: colorScheme.ACCENT,
             marginLeft: 5,
             fontSize: 20,
         },
 
         TIME_TEXT: {
             fontFamily: fontFamilies.medium,
-            color: colorScheme.SECONDARY,
+            color: colorScheme.ACCENT,
             fontSize: 20,
             margin: 5
         },

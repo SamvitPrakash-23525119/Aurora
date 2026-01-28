@@ -11,13 +11,13 @@ export default function SunriseCard({ weatherVariable, time }: {weatherVariable:
     return (
         <View style={styles.CARD_CONTAINER}>
             <View style={styles.HEADING_CONTAINER}>
-                <Sun size={30} color={colorScheme.SECONDARY} />
+                <Sun size={30} color={colorScheme.ACCENT} />
                 <Text style={styles.HEADING_TEXT}>Sunrise</Text>
             </View>
             
             <View style={styles.CONTENT_CONTAINER}>
                 <Text style={styles.TIME_TEXT}>{time}</Text>
-                <MaterialIcons name="access-time" size={20} color={colorScheme.SECONDARY} />
+                <MaterialIcons name="access-time" size={20} color={colorScheme.ACCENT} />
             </View>
         </View>
     );
