@@ -11,7 +11,7 @@ export default function cssAdapter(key){
             borderColor: colorScheme.SECONDARY,
             alignItems: 'center',
             borderRadius: 12,
-            height: '32%',
+            height: 75,
             width: '45%',
             margin: 5
         },
@@ -38,7 +38,7 @@ export default function cssAdapter(key){
         },
 
         TIME_TEXT: {
-            fontFamily: fontFamilies.regular,
+            fontFamily: fontFamilies.medium,
             color: colorScheme.SECONDARY,
             fontSize: 20,
             margin: 5
