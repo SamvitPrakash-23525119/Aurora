@@ -1,3 +1,4 @@
+import AirQualityCard from '@/components/air_quality_card/AirQualityCard';
 import HumidityCard from '@/components/humidity_card/HumidityCard';
 import SunriseCard from '@/components/sunrise_card/SunriseCard';
 import SunsetCard from '@/components/sunset_card/SunsetCard';
@@ -27,7 +28,7 @@ export default function Metrics({ weatherVariable } : { weatherVariable: string 
 
             <View style={styles.ROW_CONTAINER}>
                 <UVIndexCard weatherVariable={weatherVariable} index={7} /> 
-                <HumidityCard humidity={80} weatherVariable={weatherVariable} />
+                <AirQualityCard weatherVariable={weatherVariable} airQualityIndex={155} />
             </View>
 
         </ScrollView>
