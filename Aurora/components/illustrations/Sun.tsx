@@ -1,6 +1,6 @@
-import Svg, { Circle, Line } from 'react-native-svg'
+import Svg, { Circle, Line } from 'react-native-svg';
 
-export const Sun = ({ size = 100, color = "#EB534E" }: { size?: number, color?: string }) => {
+export const Sun = ({ size = 100, color = "#EB534E" }: { size?: number, color?: any }) => {
 	return (
 		<Svg
 			width={size}
