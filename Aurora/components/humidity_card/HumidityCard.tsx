@@ -1,8 +1,8 @@
-import { View, Text } from 'react-native';
-import cssAdapter from '@/styles/components/humidityCard';
-import colors from '@/styles/global/colors'
 import { HumidityIcon } from '@/components/illustrations/HumidityIcon';
-import VerticalProgressBar from '../vertical_progress_bar/VerticalProgressBar';
+import VerticalProgressBar from '@/components/vertical_progress_bar/VerticalProgressBar';
+import cssAdapter from '@/styles/components/humidityCard';
+import colors from '@/styles/global/colors';
+import { Text, View } from 'react-native';
 
 export default function HumidityCard({ weatherVariable, humidity } : { weatherVariable: string, humidity: number }) {
     const styles = cssAdapter(weatherVariable);
