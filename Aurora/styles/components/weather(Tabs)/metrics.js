@@ -12,15 +12,16 @@ export default function cssAdapter(key){
         },
 
         ROW_CONTAINER: {
+            flex: 1,
             flexDirection: 'row',
-            height: '100%'
+            height: '100%',
         },
-        
+
         TEXT_HEADING: {
             fontFamily: fontFamilies.regular,
             color: colorScheme.SECONDARY,
-            marginTop: '15%',
             marginBottom: 12,
+            marginTop: '15%',
             fontSize: 24,
         }
     });
