@@ -3,6 +3,7 @@ import HumidityCard from '@/components/humidity_card/HumidityCard';
 import SunriseCard from '@/components/sunrise_card/SunriseCard';
 import SunsetCard from '@/components/sunset_card/SunsetCard';
 import UVIndexCard from '@/components/uv_index_card/UVIndexCard';
+import VisibilityCard from '@/components/visibility_card/VisibilityCard';
 import cssAdapter from '@/styles/components/weather(Tabs)/metrics';
 import { ScrollView, Text, View } from 'react-native';
 
@@ -27,8 +28,8 @@ export default function Metrics({ weatherVariable } : { weatherVariable: string 
             </View>
 
             <View style={styles.ROW_CONTAINER}>
-                <UVIndexCard weatherVariable={weatherVariable} index={7} /> 
                 <AirQualityCard weatherVariable={weatherVariable} airQualityIndex={155} />
+                <VisibilityCard weatherVariable={weatherVariable} visibility={'10'} />
             </View>
 
         </ScrollView>
