@@ -6,6 +6,8 @@ import UVIndexCard from '@/components/uv_index_card/UVIndexCard';
 import VisibilityCard from '@/components/visibility_card/VisibilityCard';
 import cssAdapter from '@/styles/components/weather(Tabs)/metrics';
 import { ScrollView, Text, View } from 'react-native';
+import MoonriseCard from '../moonrise_card/MoonriseCard';
+import MoonsetCard from '../moonset_card/MoonsetCard';
 
 export default function Metrics({ weatherVariable } : { weatherVariable: string }) {
     const styles = cssAdapter(weatherVariable);
@@ -19,16 +21,25 @@ export default function Metrics({ weatherVariable } : { weatherVariable: string 
 
             <View style={styles.ROW_CONTAINER}>
                 <HumidityCard humidity={75} weatherVariable={weatherVariable} />
-                <UVIndexCard weatherVariable={weatherVariable} index={7} /> 
+                <AirQualityCard weatherVariable={weatherVariable} airQualityIndex={155} />
             </View>
 
             <View style={styles.ROW_CONTAINER}>
                 <SunriseCard weatherVariable={weatherVariable} time="5:30" />
-                <SunsetCard weatherVariable={weatherVariable} time="18:45" />
+                <MoonriseCard weatherVariable={weatherVariable} time="18:30" />
             </View>
 
             <View style={styles.ROW_CONTAINER}>
-                <AirQualityCard weatherVariable={weatherVariable} airQualityIndex={155} />
+                <SunsetCard weatherVariable={weatherVariable} time="18:45" />
+                <MoonsetCard weatherVariable={weatherVariable} time="18:30" />
+            </View>
+
+            <View style={styles.ROW_CONTAINER}>
+                <UVIndexCard weatherVariable={weatherVariable} index={5} /> 
+                <AirQualityCard weatherVariable={weatherVariable} airQualityIndex={300} />
+            </View>
+
+            <View style={styles.ROW_CONTAINER}>
                 <VisibilityCard weatherVariable={weatherVariable} visibility={'10'} />
             </View>
 

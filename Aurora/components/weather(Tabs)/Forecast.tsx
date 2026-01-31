@@ -30,8 +30,8 @@ export default function Forecast({ weatherStr } : { weatherStr: string }) {
             <HourlyWeatherCard weatherVariable={'Sunny'} time={'13:00'} temperature={'28°C'} colorScheme={colorScheme}/>
             <HourlyWeatherCard weatherVariable={'Cloudy'} time={'14:00'} temperature={'16°C'} colorScheme={colorScheme}/>
             <HourlyWeatherCard weatherVariable={'Rainy'} time={'15:00'} temperature={'7°C'} colorScheme={colorScheme}/>
-            <HourlyWeatherCard weatherVariable={'Windy'} time={'16:00'} temperature={'21°C'} colorScheme={colorScheme} current={true}/>
-            <HourlyWeatherCard weatherVariable={'Lightning'} time={'17:00'} temperature={'13°C'} colorScheme={colorScheme}/>
+            <HourlyWeatherCard weatherVariable={'Windy'} time={'16:00'} temperature={'21°C'} colorScheme={colorScheme}/>
+            <HourlyWeatherCard weatherVariable={'Lightning'} time={'17:00'} temperature={'13°C'} colorScheme={colorScheme} current={true}/>
             <HourlyWeatherCard weatherVariable={'Snowy'} time={'18:00'} temperature={'-1°C'} colorScheme={colorScheme}/>
             <HourlyWeatherCard weatherVariable={'Sunny'} time={'19:00'} temperature={'24°C'} colorScheme={colorScheme}/>
             <HourlyWeatherCard weatherVariable={'Cloudy'} time={'20:00'} temperature={'10°C'} colorScheme={colorScheme}/>
