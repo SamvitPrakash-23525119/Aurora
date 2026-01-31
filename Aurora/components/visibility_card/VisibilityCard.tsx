@@ -15,7 +15,7 @@ export default function VisibilityCard({ weatherVariable, visibility }: {weather
             </View>
             
             <View style={styles.CONTENT_CONTAINER}>
-                <Text style={styles.TIME_TEXT}>{visibility} km</Text>
+                <Text style={styles.DISTANCE_TEXT}>{visibility} km</Text>
             </View>
         </View>
     );

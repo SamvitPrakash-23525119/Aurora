@@ -4,15 +4,14 @@ import { StyleSheet } from 'react-native';
 
 export default function cssAdapter(key){
     const colorScheme = colors(key);
+
     const styles = StyleSheet.create({
         CARD_CONTAINER: {
             backgroundColor: colorScheme.SECONDARY,
-            // borderWidth: 2,
-            // borderColor: colorScheme.SECONDARY,
             alignItems: 'center',
             borderRadius: 12,
-            height: 75,
             width: '45%',
+            height: 175,
             margin: 5
         },
 
@@ -20,31 +19,40 @@ export default function cssAdapter(key){
             alignSelf: 'flex-start',
             alignItems: 'center',
             flexDirection: 'row',
-            marginBottom: 0,
-            margin: 5,
-        },
-
-        CONTENT_CONTAINER: {
-            justifyContent: 'center',
-            flexDirection: 'row',
-            alignItems: 'center',
+            marginBottom: '10%',
+            margin: 6,
+            marginLeft: 7
         },
 
         HEADING_TEXT: {
             fontFamily: fontFamilies.light,
             color: colorScheme.ACCENT,
-            marginLeft: 8,
             fontSize: 20,
+            marginLeft: 5
         },
 
-        DISTANCE_TEXT: {
-            fontFamily: fontFamilies.medium,
-            color: colorScheme.ACCENT,
-            fontSize: 20,
-            margin: 5
+        CONTENT_CONTAINER: {
+            alignItems: 'center',
+            justifyContent: 'center',
+            flex: 1
         },
+
+        PHASE_TEXT: {
+            fontFamily: fontFamilies.regular,
+            color: colorScheme.ACCENT,
+            fontSize: 18,
+            margin: 0
+        },
+
+        ILLUMINATION_TEXT: {
+            fontFamily: fontFamilies.light,
+            color: colorScheme.ACCENT,
+            fontSize: 15,
+            margin: 0
+        }
 
     });
 
     return styles;
+
 }

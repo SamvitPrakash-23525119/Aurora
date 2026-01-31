@@ -33,11 +33,11 @@ export default function cssAdapter(key){
         HEADING_TEXT: {
             fontFamily: fontFamilies.light,
             color: colorScheme.ACCENT,
-            marginLeft: 8,
+            marginLeft: 5,
             fontSize: 20,
         },
 
-        DISTANCE_TEXT: {
+        TIME_TEXT: {
             fontFamily: fontFamilies.medium,
             color: colorScheme.ACCENT,
             fontSize: 20,
