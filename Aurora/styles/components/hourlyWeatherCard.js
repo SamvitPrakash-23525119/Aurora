@@ -7,8 +7,8 @@ export default function cssAdapter(selected, key, current){
 
     const styles = StyleSheet.create({
         CARD_CONTAINER: {
-            backgroundColor: current ? colorScheme.SECONDARY : key.SECONDARY,
-            borderColor: colorScheme.ACCENT,
+            backgroundColor: current ? key.ACCENT : key.SECONDARY,
+            borderColor: key.SECONDARY,
             borderRadius: 12,
             maxHeight: 120,
             minHeight: 100,
@@ -76,19 +76,19 @@ export default function cssAdapter(selected, key, current){
         },
 
         TEMPERATURE_TEXT:{
-            color: current ? colorScheme.ACCENT : key.ACCENT,
+            color: current ? key.SECONDARY : key.ACCENT,
             fontFamily: fontFamilies.regular,
             fontSize: 30
         },
     
         WEATHER_TEXT:{
-            color: current ? colorScheme.ACCENT : key.ACCENT,
+            color: current ? key.SECONDARY : key.ACCENT,
             fontFamily: fontFamilies.light,
             fontSize: 20
         },
     
         TIME_TEXT:{
-            color: current ? colorScheme.ACCENT : key.ACCENT,
+            color: current ? key.SECONDARY : key.ACCENT,
             fontFamily: fontFamilies.light,
             fontSize: 20
         },
