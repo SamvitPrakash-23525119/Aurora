@@ -15,27 +15,27 @@ export default function HourlyWeatherCard({weatherVariable, temperature, time, c
         <View style={styles.CARD_CONTAINER}>
             {weatherVariable === "Sunny" ? (
 				<View style={styles.SUN_ILLUSTRATION_CONTAINER}>
-					<Sun size={100} color={!current ? colorScheme.ACCENT : undefined}/>
+					<Sun size={100} color={!current ? colorScheme.ACCENT : colorScheme.SECONDARY}/>
 				</View>
 			) : weatherVariable === "Lightning" ? (
 				<View style={styles.LIGHTNING_ILLUSTRATION_CONTAINER}>
-					<Lightning width={120} height={120} fill={!current ? colorScheme.ACCENT : undefined}/>
+					<Lightning width={120} height={120} fill={!current ? colorScheme.ACCENT : colorScheme.SECONDARY}/>
 				</View>
 			) : weatherVariable == 'Cloudy' ? (
 				<View style={styles.CLOUD_ILLUSTRATION_CONTAINER}>
-					<Cloud size={150} fill={!current ? colorScheme.ACCENT : undefined}/>
+					<Cloud size={150} fill={!current ? colorScheme.ACCENT : colorScheme.SECONDARY}/>
 				</View>
 			) : weatherVariable == 'Rainy' ? (
 				<View style={styles.RAIN_ILLUSTRATION_CONTAINER}>
-					<RainDroplets size={100} fill={!current ? colorScheme.ACCENT : undefined}/>
+					<RainDroplets size={100} fill={!current ? colorScheme.ACCENT : colorScheme.SECONDARY}/>
 				</View>
 			) : weatherVariable == 'Snowy' ? (
 				<View style={styles.SNOW_ILLUSTRATION_CONTAINER}>
-					<Snowflakes size={100} fill={!current ? colorScheme.ACCENT : undefined}/>
+					<Snowflakes size={100} fill={!current ? colorScheme.ACCENT : colorScheme.SECONDARY}/>
 				</View>
 			) : weatherVariable == 'Windy' ? (
 				<View style={styles.WIND_ILLUSTRATION_CONTAINER}>
-					<Wind size={100} fill={!current ? colorScheme.ACCENT : undefined}/>
+					<Wind size={100} fill={!current ? colorScheme.ACCENT : colorScheme.SECONDARY}/>
 				</View>
 			) : null}
 

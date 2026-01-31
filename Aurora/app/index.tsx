@@ -12,7 +12,7 @@ import cssAdapter from '@/styles/pages/index';
 
 
 export default function Index() {
-	const [weatherVariable, setWeatherVariable] = useState("Rainy");
+	const [weatherVariable, setWeatherVariable] = useState("Sunny");
 	const styles = cssAdapter(weatherVariable);
 
 	return (

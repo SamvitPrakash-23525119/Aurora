@@ -22,6 +22,7 @@ export default function cssAdapter(key){
             flexDirection: 'row',
             marginBottom: 0,
             margin: 5,
+            marginLeft: 8
         },
 
         CONTENT_CONTAINER: {

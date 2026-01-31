@@ -43,7 +43,6 @@ export default function Metrics({ weatherVariable } : { weatherVariable: string 
 
             <View style={styles.ROW_CONTAINER}>
                 <VisibilityCard weatherVariable={weatherVariable} visibility={'10'} />
-                <AirQualityCard weatherVariable={weatherVariable} airQualityIndex={155} />
             </View>
 
         </ScrollView>
