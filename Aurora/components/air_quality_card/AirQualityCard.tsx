@@ -12,7 +12,7 @@ export default function AirQualityCard({ weatherVariable, airQualityIndex } : { 
         <View style={styles.CARD_CONTAINER}>
             <View style={styles.HEADING_CONTAINER}>
                 <AirQualityIcon size={30} color={colorScheme.ACCENT} />
-                <Text style={styles.HEADING_TEXT}>AirQuality</Text>
+                <Text style={styles.HEADING_TEXT}>Air Quality</Text>
             </View>
 
             <VerticalProgressBar value={100-(airQualityIndex/500)*100} weatherVariable={weatherVariable} height={100} raw={true} rawValue={airQualityIndex}/>
