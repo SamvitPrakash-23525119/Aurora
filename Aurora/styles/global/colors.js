@@ -1,3 +1,6 @@
+export const GENERAL_SECONDARY = '#1B1C1E';
+export const GENERAL_ACCENT = '#E7E1C9';
+
 const rain = {
     PRIMARY: '#8FAFC6',
     SECONDARY: '#233947',
@@ -33,6 +36,7 @@ const wind = {
     SECONDARY: '#9A5859',
     ACCENT: '#DFD5CE'
 };
+
 
 function colors(key){
     

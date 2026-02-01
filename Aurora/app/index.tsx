@@ -12,8 +12,11 @@ import SideButton from '@/components/side_button/SideButton';
 import cssAdapter from '@/styles/pages/index';
 
 
-export default function Index() {
-	const [weatherVariable, setWeatherVariable] = useState("Sunny");
+export default function Index({ weather, city, country, temperature } : { weather?: string, city?: string, country?: string, temperature?: number }) {
+	const [weatherVariable, setWeatherVariable] = useState(weather || "Sunny");
+	const [City, setCity] = useState(city || "Edenvale");
+	const [Country, setCountry] = useState(country || "South Africa");
+	const [Temperature, setTemperature] = useState(temperature || 20);
 	const styles = cssAdapter(weatherVariable);
 
 	return (
@@ -23,10 +26,10 @@ export default function Index() {
 					Tuesday, 20 Jan
 				</Text>
 				<Text style={styles.TEXT_BIG}>
-					Edenvale
+					{City}
 				</Text>
 				<Text style={styles.TEXT_SMALL}>
-					South Africa
+					{Country}
 				</Text>
 			</View>
 
@@ -37,9 +40,13 @@ export default function Index() {
 				</Text>
 			</View>
 
-			<SideButton weatherVariable={weatherVariable} page={"weather"} top={"26%"} icon={"insights"} />
-			<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"33%"} icon={"landscape"} />
-			<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"40%"} icon={"settings"} />
+			{!weather && (
+				<>
+					<SideButton weatherVariable={weatherVariable} page={"weather"} top={"26%"} icon={"insights"} />
+					<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"33%"} icon={"landscape"} />
+					<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"40%"} icon={"settings"} />
+				</>
+			)}
 
 			{weatherVariable === "Sunny" ? (
 				<View style={styles.SUN_ILLUSTRATION}>
@@ -69,11 +76,11 @@ export default function Index() {
 
 			<View style={styles.TEMPERATURE_CONTAINER}>
 				<Text style={styles.TEMPERATURE_TEXT}>
-					27°C
+					{Temperature}°C
 				</Text>
 			</View>
-
 			<LocationButton weatherVariable={weatherVariable} />
+
 		</View>
 	);
 }

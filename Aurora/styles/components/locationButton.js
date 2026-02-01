@@ -6,14 +6,14 @@ export default function cssAdapter(key){
     const styles = StyleSheet.create({
         BUTTON: {
             backgroundColor: colorScheme.ACCENT,
-            position: 'absolute',
-            bottom: '4%',
-            right: '10%',
-            borderRadius: 44,
-            width: 55,
-            height: 55,
             justifyContent: 'center',
             alignItems: 'center',
+            position: 'absolute',
+            borderRadius: 44,
+            bottom: '2%',
+            right: '7%',
+            height: 55,
+            width: 55,
         },
 
     });
