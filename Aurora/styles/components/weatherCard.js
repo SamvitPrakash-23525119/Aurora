@@ -1,9 +1,7 @@
-import colors from '@/styles/global/colors';
 import { StyleSheet } from 'react-native';
 import { fontFamilies } from '../global/fonts';
 
-export default function cssAdapter(selected, key, current){
-    const colorScheme = colors(selected);
+export default function cssAdapter( key, current){
 
     const styles = StyleSheet.create({
         CARD_CONTAINER: {
