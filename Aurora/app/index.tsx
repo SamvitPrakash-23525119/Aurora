@@ -7,12 +7,13 @@ import { RainDroplets } from '@/components/illustrations/RainDroplets';
 import { Snowflakes } from '@/components/illustrations/Snowflakes';
 import { Sun } from '@/components/illustrations/Sun';
 import { Wind } from '@/components/illustrations/Wind';
+import LocationButton from '@/components/location_button/LocationButton';
 import SideButton from '@/components/side_button/SideButton';
 import cssAdapter from '@/styles/pages/index';
 
 
 export default function Index() {
-	const [weatherVariable, setWeatherVariable] = useState("Lightning");
+	const [weatherVariable, setWeatherVariable] = useState("Sunny");
 	const styles = cssAdapter(weatherVariable);
 
 	return (
@@ -71,6 +72,8 @@ export default function Index() {
 					27°C
 				</Text>
 			</View>
+
+			<LocationButton weatherVariable={weatherVariable} />
 		</View>
 	);
 }
