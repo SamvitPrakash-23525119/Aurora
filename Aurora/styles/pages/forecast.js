@@ -6,12 +6,19 @@ export default function cssAdapter(key){
     const colorScheme = colors(key);
 
     const styles = StyleSheet.create({
+        PAGE_CONTAINER: {
+            backgroundColor: colorScheme.ACCENT,
+            flex: 1
+        },
+
         PAGE_CONTENT_CONTAINER: {
             flexDirection: 'column',
             alignItems: 'center',
         },
 
-        PAGE_CONTAINER: {
+        CONTENT_CONTAINER: {
+            flex: 1
+            
         },
 
         TEXT_HEADING: {

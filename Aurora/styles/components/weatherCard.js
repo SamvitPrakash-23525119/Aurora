@@ -1,9 +1,7 @@
-import colors from '@/styles/global/colors';
 import { StyleSheet } from 'react-native';
 import { fontFamilies } from '../global/fonts';
 
-export default function cssAdapter(selected, key, current){
-    const colorScheme = colors(selected);
+export default function cssAdapter( key, current){
 
     const styles = StyleSheet.create({
         CARD_CONTAINER: {
@@ -12,7 +10,7 @@ export default function cssAdapter(selected, key, current){
             borderRadius: 12,
             maxHeight: 120,
             minHeight: 100,
-            minWidth: 375,
+            minWidth: 365,
             borderWidth: current? 1 : 0,
             padding: 16,
             margin: 5,

@@ -6,10 +6,10 @@ import { RainDroplets } from '@/components/illustrations/RainDroplets';
 import { Snowflakes } from '@/components/illustrations/Snowflakes';
 import { Sun } from '@/components/illustrations/Sun';
 import { Wind } from '@/components/illustrations/Wind';
-import cssAdapter from '@/styles/components/hourlyWeatherCard';
+import cssAdapter from '@/styles/components/weatherCard';
 
-export default function HourlyWeatherCard({weatherVariable, temperature, time, colorScheme, current}:{weatherVariable:string, temperature:string, time:string, colorScheme:any, current?:boolean}) {
-    const styles = cssAdapter(weatherVariable, colorScheme, current);
+export default function WeatherCard({weatherVariable, temperature, time, colorScheme, current}:{weatherVariable:string, temperature:string, time:string, colorScheme:any, current?:boolean}) {
+    const styles = cssAdapter(colorScheme, current);
 
     return (
         <View style={styles.CARD_CONTAINER}>
