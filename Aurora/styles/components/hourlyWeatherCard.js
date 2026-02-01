@@ -12,7 +12,7 @@ export default function cssAdapter(selected, key, current){
             borderRadius: 12,
             maxHeight: 120,
             minHeight: 100,
-            minWidth: 375,
+            minWidth: 365,
             borderWidth: current? 1 : 0,
             padding: 16,
             margin: 5,

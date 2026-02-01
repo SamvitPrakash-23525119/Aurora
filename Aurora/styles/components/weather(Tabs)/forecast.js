@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native'
-import colors from'@/styles/global/colors'
+import colors from '@/styles/global/colors';
 import { fontFamilies } from '@/styles/global/fonts';
+import { StyleSheet } from 'react-native';
 
 export default function cssAdapter(key){
     const colorScheme = colors(key);
@@ -20,6 +20,7 @@ export default function cssAdapter(key){
             marginTop: '15%',
             marginBottom: 12,
             fontSize: 24,
+            textAlign: 'center'
         }
 
     });
