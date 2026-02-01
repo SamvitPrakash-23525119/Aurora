@@ -37,7 +37,7 @@ export default function Forecast() {
                 <WeatherCard weatherVariable={'Lightning'} time={'Friday'} temperature={'15°C'} colorScheme={colorScheme}/>
                 <WeatherCard weatherVariable={'Snowy'} time={'Saturday'} temperature={'-2°C'} colorScheme={colorScheme}/>
                 <WeatherCard weatherVariable={'Sunny'} time={'Sunday'} temperature={'25°C'} colorScheme={colorScheme}/>
-                <WeatherCardPlaceholder weatherVariable={weatherStr} />
+                <WeatherCardPlaceholder weatherVariable={weatherStr} height={1}/>
 
             </ScrollView>
         </View>
