@@ -97,7 +97,7 @@ export default function Index({ weather, city, country, temperature } : { weathe
 					{Temperature}°C
 				</Text>
 			</View>
-			<LocationButton weatherVariable={weatherVariable} />
+			<LocationButton weatherVariable={weatherVariable} disabled={!!weather}/>
 
 		</View>
 	);

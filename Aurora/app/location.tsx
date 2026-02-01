@@ -1,5 +1,6 @@
 import Index from '@/app/index';
 import Carousel from '@/components/carousel/Carousel';
+import NewBookmark from '@/components/new_bookmark/NewBookmark';
 import { styles } from '@/styles/pages/location';
 import { View } from 'react-native';
 
@@ -20,8 +21,11 @@ export default function Location(){
         { id: '5', component: <Index weather={'Windy'} city='Durban' country='South Africa' temperature={28}/>, 
             weather: 'Windy', city: 'Durban', country: 'South Africa', temperature: 28 },
             
+        { id: '7', component: <NewBookmark/>},
+        
         { id: '6', component: <Index weather={'Lightning'} city='East London' country='South Africa' temperature={26}/>, 
-            weather: 'Lightning', city: 'East London', country: 'South Africa', temperature: 26 }
+            weather: 'Lightning', city: 'East London', country: 'South Africa', temperature: 26 },
+
     ];
 
     return(

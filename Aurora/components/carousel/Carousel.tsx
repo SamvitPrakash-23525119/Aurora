@@ -15,10 +15,10 @@ export default function Carousel({ pages }: { pages: any }) {
         router.push({
             pathname: ('/'),
             params: {
-                weather: item.weather,
-                city: item.city,
-                country: item.country,
-                temperature: item.temperature
+                weather: item?.weather,
+                city: item?.city,
+                country: item?.country,
+                temperature: item?.temperature
             }
         });
     };
