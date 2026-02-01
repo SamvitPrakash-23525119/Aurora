@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useLocalSearchParams } from 'expo-router';
+import React, { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 
 import { Cloud } from '@/components/illustrations/Cloud';
@@ -18,6 +19,23 @@ export default function Index({ weather, city, country, temperature } : { weathe
 	const [Country, setCountry] = useState(country || "South Africa");
 	const [Temperature, setTemperature] = useState(temperature || 20);
 	const styles = cssAdapter(weatherVariable);
+	const params = useLocalSearchParams();
+
+	useEffect(() => {		
+		if (params.weather) {
+			setWeatherVariable(Array.isArray(params.weather) ? params.weather[0] : params.weather);
+		}
+		if (params.city) {
+			setCity(Array.isArray(params.city) ? params.city[0] : params.city);
+		}
+		if (params.country) {
+			setCountry(Array.isArray(params.country) ? params.country[0] : params.country);
+		}
+		if (params.temperature) {
+			const temp = Array.isArray(params.temperature) ? params.temperature[0] : params.temperature;
+			setTemperature(parseInt(temp));
+		}
+	}, [params]);
 
 	return (
 		<View style={styles.PAGE_CONTAINER}>

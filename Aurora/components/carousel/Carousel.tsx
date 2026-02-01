@@ -11,6 +11,18 @@ const SPACING = (width - CARD_WIDTH) / 2;
 export default function Carousel({ pages }: { pages: any }) {
     const scrollX = useRef(new Animated.Value(0)).current;
 
+    const onNavigate = ( item : any ) => {
+        router.push({
+            pathname: ('/'),
+            params: {
+                weather: item.weather,
+                city: item.city,
+                country: item.country,
+                temperature: item.temperature
+            }
+        });
+    };
+
     return (
         <Animated.FlatList
             data={pages}
@@ -57,7 +69,7 @@ export default function Carousel({ pages }: { pages: any }) {
                                     borderRadius: 28,
                                     overflow: 'hidden',
                                 }}
-                                onPress={() => {router.push('/')}}
+                                onPress={() => {onNavigate(item)}}
                             >
                                 {item.component}
                             </TouchableOpacity>
