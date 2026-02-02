@@ -1,5 +1,6 @@
+import { MaterialIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Animated, Dimensions, TouchableOpacity, View } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
@@ -10,6 +11,7 @@ const SPACING = (width - CARD_WIDTH) / 2;
 
 export default function Carousel({ pages }: { pages: any }) {
     const scrollX = useRef(new Animated.Value(0)).current;
+    const [remove, setRemove] = useState(false);
 
     const onNavigate = ( item : any ) => {
         router.push({
@@ -21,6 +23,10 @@ export default function Carousel({ pages }: { pages: any }) {
                 temperature: item?.temperature
             }
         });
+    };
+
+    const onRemove = (item: any) => {
+        console.log("Remove item:", item.city);
     };
 
     return (
@@ -55,12 +61,31 @@ export default function Carousel({ pages }: { pages: any }) {
                 });
 
                 return (
-                    <View style={{ width: CARD_WIDTH }}>
+                    <View 
+                        style={{ width: CARD_WIDTH }}
+                        onTouchStart={() => {remove && setRemove(false)}}
+                    >
                         <Animated.View
                             style={{
                                 transform: [{ scale }],
                             }}
                         >
+                            {item.city && <TouchableOpacity 
+                                onPress={() => onRemove(item)}
+                                style={{
+                                    display: remove ? 'flex' : 'none',
+                                    position: 'absolute',
+                                    borderColor: 'red',
+                                    borderRadius: 28,
+                                    borderWidth: 1,
+                                    zIndex: 1,
+                                    right: 16,
+                                    top: 16,
+                                }}
+                            >
+                                <MaterialIcons name="close" size={30} color="red" />
+                            </TouchableOpacity>}
+
                             <TouchableOpacity
                                 activeOpacity={0.9}
                                 style={{
@@ -70,6 +95,9 @@ export default function Carousel({ pages }: { pages: any }) {
                                     overflow: 'hidden',
                                 }}
                                 onPress={() => {onNavigate(item)}}
+                                onLongPress={() => setRemove(!remove)}
+                                delayLongPress={400}
+                                disabled={item.city ? remove : false}
                             >
                                 {item.component}
                             </TouchableOpacity>

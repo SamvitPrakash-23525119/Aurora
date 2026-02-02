@@ -54,7 +54,7 @@ function colors(key){
         case 'Windy':
             return wind;
         default:
-            return sunny;
+            return lightning;
     }
 }
 
