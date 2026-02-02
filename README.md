@@ -271,58 +271,7 @@ In the project directory, you can run:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! If you'd like to contribute to Aurora, please follow these steps:
-
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. **Open a Pull Request**
-
-### Code Style Guidelines
-- Follow the existing code style and conventions
-- Use TypeScript for type safety
-- Write meaningful commit messages
-- Add comments for complex logic
-- Ensure all ESLint rules pass before submitting
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👤 Contact
-
-**Samvit Prakash**
-
-- GitHub: [@SamvitPrakash-23525119](https://github.com/SamvitPrakash-23525119)
-- Project Link: [https://github.com/SamvitPrakash-23525119/Aurora](https://github.com/SamvitPrakash-23525119/Aurora)
-
----
-
-## 🙏 Acknowledgments
-
-- Weather data visualization inspired by modern weather apps
-- Icons and illustrations created using React Native SVG
-- Built with ❤️ using React Native and Expo
-
----
-
 <div align="center">
-  <p>Made with ☀️ by Samvit Prakash</p>
+  <p>Made with ☀️ by Samvit Prakash & Jerusha Thaver</p>
   <p>⭐ Star this repository if you find it helpful!</p>
 </div>
