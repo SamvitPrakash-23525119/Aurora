@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native'
-import colors from '@/styles/global/colors'
+import colors from '@/styles/global/colors';
 import { fontFamilies } from '@/styles/global/fonts';
+import { StyleSheet } from 'react-native';
 
 
 export default function cssAdapter(key) {
@@ -39,7 +39,7 @@ export default function cssAdapter(key) {
         MAIN_TEXT_CONTAINER: {
             position: 'absolute',
             top: '10%',
-            right: '75%',
+            left: '5%',
         },
 
         TEMPERATURE_CONTAINER: {
@@ -75,38 +75,38 @@ export default function cssAdapter(key) {
 
         SUN_ILLUSTRATION: {
             position: 'absolute',
-            top: 320,
-            right: 30,
+            top: '41%',
+            right: '9%'
         },
 
         CLOUD_ILLUSTRATION: {
             position: 'absolute',
-            top: 290,
-            right: 25,
+            top: '37%',
+            right: '8%'
         },
 
         RAIN_ILLUSTRATION: {
             position: 'absolute',
-            top: 300,
-            right: 30,
+            top: '38%',                
+            right: '8%'
         },
 
         SNOW_ILLUSTRATION: {
             position: 'absolute',
-            top: 300,
-            right: 30,
+            top: '38%',
+            right: '8%'
         },
 
         WIND_ILLUSTRATION: {
             position: 'absolute',
-            top: 320,
-            right: 30,
+            top: '41%',
+            right: '8%',
         },
 
         LIGHTNING_ILLUSTRATION: {
             position: 'absolute',
-            top: 130,
-            right: 0,
+            top: '15%',
+            right: '0%'
         },
 
     });
