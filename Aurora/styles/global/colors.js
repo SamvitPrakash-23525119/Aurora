@@ -1,4 +1,4 @@
-export const GENERAL_SECONDARY = '#1B1C1E';
+export const GENERAL_SECONDARY = 'black';//'#1B1C1E';
 export const GENERAL_ACCENT = '#E7E1C9';
 
 const rain = {

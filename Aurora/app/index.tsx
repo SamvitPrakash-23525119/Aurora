@@ -10,7 +10,6 @@ import { Sun } from '@/components/illustrations/Sun';
 import { Wind } from '@/components/illustrations/Wind';
 import LocationButton from '@/components/location_button/LocationButton';
 import SideButton from '@/components/side_button/SideButton';
-import { GENERAL_ACCENT } from '@/styles/global/colors';
 import cssAdapter from '@/styles/pages/index';
 
 
@@ -39,7 +38,7 @@ export default function Index({ weather, city, country, temperature } : { weathe
 	}, [params]);
 
 	return (
-		<View style={[styles.PAGE_CONTAINER, {borderWidth: weather=='Lightning' ? 1 : 0, borderColor: GENERAL_ACCENT, borderRadius: 33}]}>
+		<View style={styles.PAGE_CONTAINER}>
 			<View style={styles.MAIN_TEXT_CONTAINER}>
 				<Text style={styles.TEXT_SMALL}>
 					Tuesday, 20 Jan

@@ -55,6 +55,13 @@ export default function RootLayout() {
                     animation: 'fade',
                 }}
             />
+
+            <Stack.Screen name="bookmark" 
+                options={{
+                    headerShown: false,
+                    animation: 'fade',
+                }}
+            />
         </Stack>
     );
 }

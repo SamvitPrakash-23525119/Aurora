@@ -13,7 +13,7 @@ export default function Carousel({ pages }: { pages: any }) {
 
     const onNavigate = ( item : any ) => {
         router.push({
-            pathname: ('/'),
+            pathname: (item?.page === 'bookmark' ? '/bookmark' : '/' as any),
             params: {
                 weather: item?.weather,
                 city: item?.city,
