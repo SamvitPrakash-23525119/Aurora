@@ -1,3 +1,4 @@
+import colors from '@/styles/global/colors';
 import { MaterialIcons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import React, { useRef, useState } from 'react';
@@ -75,7 +76,7 @@ export default function Carousel({ pages }: { pages: any }) {
                                 style={{
                                     display: remove ? 'flex' : 'none',
                                     position: 'absolute',
-                                    borderColor: 'red',
+                                    borderColor: colors(item.weather).ACCENT,
                                     borderRadius: 28,
                                     borderWidth: 1,
                                     zIndex: 1,
@@ -83,7 +84,7 @@ export default function Carousel({ pages }: { pages: any }) {
                                     top: 16,
                                 }}
                             >
-                                <MaterialIcons name="close" size={30} color="red" />
+                                <MaterialIcons name="close" size={30} color={colors(item.weather).ACCENT} />
                             </TouchableOpacity>}
 
                             <TouchableOpacity
