@@ -1,19 +1,17 @@
-import { StyleSheet } from 'react-native'
-import colors from '@/styles/global/colors'
+import { StyleSheet } from 'react-native';
 import { fontFamilies } from '../global/fonts';
 
-export default function cssAdapter(key){
-    const colorScheme = colors(key);
+export default function cssAdapter( key, current){
 
     const styles = StyleSheet.create({
         CARD_CONTAINER: {
-            backgroundColor: colorScheme.SECONDARY,
-            borderColor: colorScheme.ACCENT,
+            backgroundColor: current ? key.ACCENT : key.SECONDARY,
+            borderColor: key.SECONDARY,
             borderRadius: 12,
             maxHeight: 120,
             minHeight: 100,
-            minWidth: 375,
-            borderWidth: 1,
+            minWidth: 365,
+            borderWidth: current? 1 : 0,
             padding: 16,
             margin: 5,
 
@@ -76,19 +74,19 @@ export default function cssAdapter(key){
         },
 
         TEMPERATURE_TEXT:{
-            color: colorScheme.ACCENT,
+            color: current ? key.SECONDARY : key.ACCENT,
             fontFamily: fontFamilies.regular,
             fontSize: 30
         },
     
         WEATHER_TEXT:{
-            color: colorScheme.ACCENT,
+            color: current ? key.SECONDARY : key.ACCENT,
             fontFamily: fontFamilies.light,
             fontSize: 20
         },
     
         TIME_TEXT:{
-            color: colorScheme.ACCENT,
+            color: current ? key.SECONDARY : key.ACCENT,
             fontFamily: fontFamilies.light,
             fontSize: 20
         },

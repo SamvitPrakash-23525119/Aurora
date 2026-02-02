@@ -10,8 +10,8 @@ export default function cssAdapter(key){
             backgroundColor: colorScheme.SECONDARY,
             alignItems: 'center',
             borderRadius: 12,
-            height: '65%',
             width: '45%',
+            height: 175,
             margin: 5
         },
 
@@ -19,12 +19,13 @@ export default function cssAdapter(key){
             alignSelf: 'flex-start',
             alignItems: 'center',
             flexDirection: 'row',
-            marginBottom: 10,
+            marginBottom: '10%',
+            margin: 5,
         },
 
         HEADING_TEXT: {
-            color: colorScheme.ACCENT,
             fontFamily: fontFamilies.light,
+            color: colorScheme.ACCENT,
             fontSize: 20,
         }
 

@@ -1,3 +1,6 @@
+export const GENERAL_SECONDARY = 'black';//'#1B1C1E';
+export const GENERAL_ACCENT = '#E7E1C9';
+
 const rain = {
     PRIMARY: '#8FAFC6',
     SECONDARY: '#233947',
@@ -34,6 +37,7 @@ const wind = {
     ACCENT: '#DFD5CE'
 };
 
+
 function colors(key){
     
     switch (key) {
@@ -50,7 +54,7 @@ function colors(key){
         case 'Windy':
             return wind;
         default:
-            return sunny;
+            return lightning;
     }
 }
 

@@ -1,6 +1,5 @@
-import { Stack } from "expo-router";
 import { useFonts } from 'expo-font';
-import { SplashScreen } from "expo-router";
+import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 
 SplashScreen.preventAutoHideAsync();
@@ -47,6 +46,20 @@ export default function RootLayout() {
                 options={{
                     headerShown: false,
                     animation: 'slide_from_left',
+                }}
+            />
+
+            <Stack.Screen name="location" 
+                options={{
+                    headerShown: false,
+                    animation: 'slide_from_bottom',
+                }}
+            />
+
+            <Stack.Screen name="bookmark" 
+                options={{
+                    headerShown: false,
+                    animation: 'slide_from_right',
                 }}
             />
         </Stack>

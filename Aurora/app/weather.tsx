@@ -1,13 +1,13 @@
-import { View, useWindowDimensions, PanResponder, Text } from 'react-native'
-import { useRef, useState } from 'react'; 
-import { router, useLocalSearchParams } from 'expo-router';
-import { TabView, TabBar } from 'react-native-tab-view'; 
+import { useLocalSearchParams } from 'expo-router';
+import { useState } from 'react';
+import { View, useWindowDimensions } from 'react-native';
+import { TabView } from 'react-native-tab-view';
 
-import  cssAdapter from '@/styles/pages/weather';
+import DotIndicator from '@/components/dot_indicator/DotIndicator';
 import SideButton from '@/components/side_button/SideButton';
 import Forecast from '@/components/weather(Tabs)/Forecast';
 import Metrics from '@/components/weather(Tabs)/Metrics';
-import DotIndicator from '@/components/dot_indicator/DotIndicator';
+import cssAdapter from '@/styles/pages/weather';
 
 export default function Weather() {
     const { weather } = useLocalSearchParams();
