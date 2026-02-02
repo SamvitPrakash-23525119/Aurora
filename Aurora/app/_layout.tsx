@@ -52,14 +52,14 @@ export default function RootLayout() {
             <Stack.Screen name="location" 
                 options={{
                     headerShown: false,
-                    animation: 'fade',
+                    animation: 'slide_from_bottom',
                 }}
             />
 
             <Stack.Screen name="bookmark" 
                 options={{
                     headerShown: false,
-                    animation: 'fade',
+                    animation: 'slide_from_right',
                 }}
             />
         </Stack>
