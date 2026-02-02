@@ -4,15 +4,15 @@ import { StyleSheet } from "react-native";
 const colorScheme = colors('Lightning');
 export const INPUT = colorScheme.ACCENT;
 
-export default function cssAdapter(key){
+export default function cssAdapter(){
 
     const styles = StyleSheet.create({
 
         CONTAINER: {
-            flexDirection: 'row',
-            alignItems: 'center',
             backgroundColor: colorScheme.SECONDARY,
             color: colorScheme.ACCENT,
+            flexDirection: 'row',
+            alignItems: 'center',
             paddingRight: 15,
             borderRadius: 33,
             paddingLeft: 15,
