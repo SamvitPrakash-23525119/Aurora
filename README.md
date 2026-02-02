@@ -5,6 +5,8 @@
   <p><strong>An Aesthetic, Minimalist and Sleek Weather App</strong></p>
 
   ![Aurora](https://img.shields.io/badge/Aurora-000000?style=for-the-badge&logo=smartphone&logoColor=white)
+
+  <img src="./Aurora/assets/screen-recordings/aurora-demo.gif" alt="Aurora Weather App Demo" width="200">
   
   ![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
   ![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white)
@@ -15,10 +17,9 @@
   ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
 
 </div>
-
+<!-- 
 <div align="center">
-  <img src="./Aurora/assets/screen-recordings/aurora-demo.gif" alt="Aurora Weather App Demo" width="250">
-</div>
+</div> -->
 
 ## Overview
 
