@@ -10,11 +10,12 @@ import { Sun } from '@/components/illustrations/Sun';
 import { Wind } from '@/components/illustrations/Wind';
 import LocationButton from '@/components/location_button/LocationButton';
 import SideButton from '@/components/side_button/SideButton';
+import { GENERAL_ACCENT } from '@/styles/global/colors';
 import cssAdapter from '@/styles/pages/index';
 
 
 export default function Index({ weather, city, country, temperature } : { weather?: string, city?: string, country?: string, temperature?: number }) {
-	const [weatherVariable, setWeatherVariable] = useState(weather || "Sunny");
+	const [weatherVariable, setWeatherVariable] = useState(weather || "Lightning");
 	const [City, setCity] = useState(city || "Edenvale");
 	const [Country, setCountry] = useState(country || "South Africa");
 	const [Temperature, setTemperature] = useState(temperature || 20);
@@ -38,7 +39,7 @@ export default function Index({ weather, city, country, temperature } : { weathe
 	}, [params]);
 
 	return (
-		<View style={styles.PAGE_CONTAINER}>
+		<View style={[styles.PAGE_CONTAINER, {borderWidth: weather=='Lightning' ? 1 : 0, borderColor: GENERAL_ACCENT, borderRadius: 33}]}>
 			<View style={styles.MAIN_TEXT_CONTAINER}>
 				<Text style={styles.TEXT_SMALL}>
 					Tuesday, 20 Jan
@@ -72,7 +73,7 @@ export default function Index({ weather, city, country, temperature } : { weathe
 				</View>
 			) : weatherVariable === "Lightning" ? (
 				<View style={styles.LIGHTNING_ILLUSTRATION}>
-					<Lightning />
+					<Lightning height={!weather ? 700 : 500} />
 				</View>
 			) : weatherVariable == 'Cloudy' ? (
 				<View style={styles.CLOUD_ILLUSTRATION}>

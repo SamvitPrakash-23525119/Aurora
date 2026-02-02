@@ -21,10 +21,10 @@ export default function Location(){
         { id: '5', component: <Index weather={'Windy'} city='Durban' country='South Africa' temperature={28}/>, 
             weather: 'Windy', city: 'Durban', country: 'South Africa', temperature: 28 },
             
-        { id: '7', component: <NewBookmark/>},
-        
         { id: '6', component: <Index weather={'Lightning'} city='East London' country='South Africa' temperature={26}/>, 
             weather: 'Lightning', city: 'East London', country: 'South Africa', temperature: 26 },
+        
+        { id: '7', component: <NewBookmark/>},
 
     ];
 
