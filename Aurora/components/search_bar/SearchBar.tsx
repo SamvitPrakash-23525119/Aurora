@@ -7,7 +7,7 @@ const TOP_OFFSET = 300;
 export default function SearchBar({ onSearch }: { onSearch: (query: string) => void }) {
     const [value, setValue] = useState('');
     const translateY = useRef(new Animated.Value(0)).current
-    const styles = cssAdapter('Lightning');
+    const styles = cssAdapter();
 
     const animateToTop = () => {
         Animated.spring(translateY, {
