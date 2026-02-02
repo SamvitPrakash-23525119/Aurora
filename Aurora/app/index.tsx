@@ -37,6 +37,10 @@ export default function Index({ weather, city, country, temperature } : { weathe
 		}
 	}, [params]);
 
+	const refresh = () => {
+		console.log('Refresh')
+	}
+
 	return (
 		<View style={styles.PAGE_CONTAINER}>
 			<View style={styles.MAIN_TEXT_CONTAINER}>
@@ -62,7 +66,7 @@ export default function Index({ weather, city, country, temperature } : { weathe
 				<>
 					<SideButton weatherVariable={weatherVariable} page={"weather"} top={"26%"} icon={"insights"} />
 					<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"33%"} icon={"landscape"} />
-					<SideButton weatherVariable={weatherVariable} page={"forcast"} top={"40%"} icon={"settings"} />
+					<SideButton weatherVariable={weatherVariable} top={"40%"} icon={"refresh"} custom={refresh} />
 				</>
 			)}
 
